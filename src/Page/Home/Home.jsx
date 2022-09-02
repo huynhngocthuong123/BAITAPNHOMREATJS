@@ -1,6 +1,7 @@
 import React from 'react'
 import CarouselHome from './CarouselHome/CarouselHome'
 import CarouselListFilm from './CarouselListFilm/CarouselListFilm'
+import DetailHeThongRap from './DetailCumRapPhim/ALL'
 
 export default function Home() {
     // call API Banner,Lisfilm trong FilmAction.js 
@@ -21,6 +22,7 @@ export default function Home() {
         <div>
             <CarouselHome />
             <CarouselListFilm />
+            <DetailHeThongRap />
         </div>
     )
 }
