@@ -1,9 +1,8 @@
 import React from "react";
 import YouTube from "react-youtube";
 
-export default function BannerTrailer() {
-  const showTrailer = ["uoKSzOuPcfY"];
-  // const showTrailer = ["uoKSzOuPcfY", "kBY2k3G6LsM", "v=jBa_aHwCbC4"];
+export default function BannerTrailer(props) {
+  const showTrailer = [props.prop[0].trailer];
   const opts = {
     height: "450",
     width: "800",
