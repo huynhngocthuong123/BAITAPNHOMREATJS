@@ -7,7 +7,6 @@ export default function FilmDangChieu() {
   let { DSFilmDangChieu } = useSelector((state) => {
     return state.DSFilmRecucer;
   });
-  // console.log("lấy ok", DSFilmDangChieu);
   return (
     <div className="MovieContainer">
       <div className="movieSlide container">

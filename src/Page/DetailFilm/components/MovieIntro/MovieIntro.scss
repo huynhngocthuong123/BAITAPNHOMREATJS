@@ -27,6 +27,14 @@
     max-width: 940px;
     width: 100%;
   }
+  .show__trailer{
+    .close_trailerFilm{
+      position: absolute;
+  left: 72%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+    }
+  }
 
   .detail__info {
     position: absolute;
