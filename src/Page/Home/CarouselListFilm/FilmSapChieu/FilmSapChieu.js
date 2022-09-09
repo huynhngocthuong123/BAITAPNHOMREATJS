@@ -5,6 +5,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 // import { Options } from "@splidejs/splide";
 import "./FilmSapChieu.css";
+import { NavLink } from "react-router-dom";
 export default function FilmSapChieu() {
   let { DSFilmSapChieu } = useSelector((state) => {
     return state.DSFilmRecucer;
@@ -43,6 +44,7 @@ export default function FilmSapChieu() {
                     </p>
                     <p className="movieName"> {item.tenPhim}</p>
                   </div>
+                  <NavLink className='btn btn-primary btn__muave' to={`/detail/${item.maPhim}`}>Mua Vé</NavLink>
                 </div>
               </SplideSlide>
             );

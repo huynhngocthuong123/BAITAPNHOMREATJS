@@ -18,3 +18,4 @@ export default function BannerTrailer() {
   };
   return renderTrailer();
 }
+

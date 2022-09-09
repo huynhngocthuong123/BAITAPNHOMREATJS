@@ -10,6 +10,8 @@
     "antd": "^4.22.8",
     "axios": "^0.27.2",
     "install": "^0.13.0",
+    "moment": "^2.29.4",
+    "node-sass": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -19,6 +21,9 @@
     "react-youtube": "^9.0.3",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
+    "sas": "^3.0.4",
+    "sass": "^1.54.8",
+    "sass-loader": "^13.0.2",
     "styled": "^1.0.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

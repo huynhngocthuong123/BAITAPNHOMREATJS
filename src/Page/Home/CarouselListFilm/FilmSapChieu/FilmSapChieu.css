@@ -44,3 +44,9 @@
 .movieDanhGia {
   color: yellow;
 }
+
+.btn__muave {
+  font-weight: bold;
+  margin-top: -15px;
+  width: 100%;
+}
