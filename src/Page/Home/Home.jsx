@@ -1,28 +1,19 @@
 import React from 'react'
 import CarouselHome from './CarouselHome/CarouselHome'
 import CarouselListFilm from './CarouselListFilm/CarouselListFilm'
-import DetailHeThongRap from './DetailCumRapPhim/ALL'
+import { useSelector } from 'react-redux'
+import DetailRap from './DetailCumRapPhim/DSHeThongRap';
+import NewsFeedFilm from './NewsFeedFilm/NewsFeedFilm';
+
 
 export default function Home() {
-    // call API Banner,Lisfilm trong FilmAction.js 
-    // save API Listfilm => state FilmReducer
-    // RenderBanner = () => {
-    //     // render banner từ API
-    //     // dùng thư viện chuyển slide (slick or owl-carousel)
-
-
-    // }
-
-    // RenderListFilm = () => {
-    //     // render danh sách phim lấy từ API
-    //     // dùng thư viện chuyển slide (slick or owl-carousel)
-
-    // }
+    let { DSHeThongRap } = useSelector((state) => state.HeThongDSRapReducer);
     return (
         <div>
             <CarouselHome />
             <CarouselListFilm />
-            <DetailHeThongRap />
+            <DetailRap DSHeThongRap={DSHeThongRap} />
+            <NewsFeedFilm />
         </div>
     )
 }

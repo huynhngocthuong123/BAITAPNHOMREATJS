@@ -1,7 +1,8 @@
 import React from "react";
 import YouTube from "react-youtube";
 
-export default function TrailerFilmDetail(id) {
+export default function TrailerFilmDetail({ id }) {
+  // console.log(id);
   const opts = {
     height: "450",
     width: "800",
@@ -9,5 +10,5 @@ export default function TrailerFilmDetail(id) {
       autoplay: 1,
     },
   };
-    return <YouTube className="youtube_trailer" videoId={id} opts={opts} />;
+  return <YouTube className="youtube_trailer" videoId={id} opts={opts} />;
 }

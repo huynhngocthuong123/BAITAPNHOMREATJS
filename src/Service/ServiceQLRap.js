@@ -3,7 +3,9 @@ import ServicebaseAxios from "./ServicebaseAxios";
 
 export class QLRapService extends ServicebaseAxios {
   layDSHeThongRap = () => {
-    return this.GET("/api/QuanLyRap/LayThongTinHeThongRap");
+    return this.GET(
+      `/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=${GPOUP_ID}`
+    );
   };
 
   layThongTinLichChieuPhim = (maPhim) => {

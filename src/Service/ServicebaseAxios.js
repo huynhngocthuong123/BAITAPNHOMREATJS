@@ -6,7 +6,7 @@ export default class ServicebaseAxios {
   GET = (url) => {
     return axios({
       method: "get",
-      url: `${URL_API}/${url}?maNhom=${GPOUP_ID}`,
+      url: `${URL_API}/${url}`,
       headers: {
         TokenCybersoft: TOKEN,
       },

@@ -1,9 +1,6 @@
-.carousel_BG {
-  position: relative;
-}
 .img_play_carousel {
-  border: 0;
   background-color: transparent;
+  border: 0;
   position: absolute;
   left: 50%;
   top: 50%;

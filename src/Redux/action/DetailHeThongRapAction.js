@@ -1,4 +1,4 @@
-import { quanLyRapService } from "../../Service/ServiceCumRap";
+import { quanLyRapService } from "../../Service/ServiceQLRap";
 import { CHI_TIET_PHIM } from "./Type/QLRapType";
 export const layDSRap = () => {
   // xử lý thành công
