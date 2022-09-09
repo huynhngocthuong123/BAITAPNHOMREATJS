@@ -20,13 +20,6 @@ export default function CarouselHome() {
     let { mangBanner } = useSelector((state) => {
         return state.bannerReducer;
     });
-    const opts = {
-        height: "450",
-        width: "800",
-        playerVars: {
-            autoplay: 1,
-        },
-    };
 
     const contentStyle = {
         height: "100vh",
@@ -34,6 +27,7 @@ export default function CarouselHome() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
     };
+
     const renderBanner = () =>
         mangBanner.map((item, index) => {
             return (

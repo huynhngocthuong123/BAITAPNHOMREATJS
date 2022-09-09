@@ -6,6 +6,7 @@ export const DSFilm = () => {
     try {
       // xử lý thành công
       const result = await quanLyFilmService.layDSFilm();
+      console.log(result)
       // console.log("thành công lấy phim", result.data.content);
       let action = {
         type: DS_FILM,

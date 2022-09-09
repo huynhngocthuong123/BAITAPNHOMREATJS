@@ -17,3 +17,4 @@ export default function BannerTrailer(props) {
   };
   return renderTrailer();
 }
+

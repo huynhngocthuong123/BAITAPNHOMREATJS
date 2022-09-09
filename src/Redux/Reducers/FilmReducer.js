@@ -1,8 +1,14 @@
+import { CHI_TIET_PHIM } from "../action/Type/QLRapType";
 import { DS_FILM } from "../action/Type/TypeActionFilm";
 const initialState = {
   DSFilmSapChieu: [],
   DSFilmDangChieu: [],
+
+  filmDetail: {
+    
+  }
 };
+
 
 export const DSFilmRecucer = (state = initialState, action) => {
   switch (action.type) {
@@ -26,6 +32,9 @@ export const DSFilmRecucer = (state = initialState, action) => {
       }
       return { ...state };
 
+    case CHI_TIET_PHIM: 
+      state.filmDetail = action.filmDetail;
+      return{...state}
     default:
       return state;
   }
