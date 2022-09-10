@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import Home from "./Page/Home/Home";
 import DetailFilm from "./Page/DetailFilm/DetailFilm";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -22,7 +23,7 @@ function App() {
           );
         }}
       />
-      <Route exact path="/detail/:id" component={DetailFilm}/>
+      <Route exact path="/detail/:id" component={DetailFilm} />
     </BrowserRouter>
   );
 }

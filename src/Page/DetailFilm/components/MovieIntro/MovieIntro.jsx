@@ -8,10 +8,11 @@ import YouTube from 'react-youtube'
 import Play from '../../../../Component/PlayVideo/Playvideo'
 const MovieIntro = ({ film }) => {
 
+  let [play, setPlay] = useState(false);
+  let [playButton, setPlayButton] = useState(true);
   // ? sử dụng thư viện React-youtube truyền vào tham số /ID 
   // ? trailer = link/ID => cắt ID để truyền biến vào TrailerFilmDetail
   let trailer = film.trailer?.slice(30, film.trailer.legnth)
-  // console.log(idtrailer)
 
   const [hasid, setHasId] = useState('')
   const showTrailer = (id) => {
