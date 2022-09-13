@@ -33,7 +33,7 @@ export default function CarouselHome() {
             return (
                 <div key={index}>
                     <div
-                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative" }}
+                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative", height: 870 }}
                     >
                         <div className="img_play_carousel">
                             {playButton ? <button onClick={() => {
@@ -58,9 +58,8 @@ export default function CarouselHome() {
         })
         setShowtrailer(okla)
     }
-
     return (
-        <div className="carousel_BG">
+        <div className="carousel_BG pb-4">
             <Carousel autoplay>{renderBanner()}</Carousel>
             {play ? (
                 <div>

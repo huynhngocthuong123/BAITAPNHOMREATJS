@@ -7,11 +7,11 @@ export class QLRapService extends ServicebaseAxios {
       `/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=${GPOUP_ID}`
     );
   };
-
   layThongTinLichChieuPhim = (maPhim) => {
     return this.GET(`/api/QuanLyRap/LayThongTinLichChieuPhim?maPhim=${maPhim}&MaNhom=${GPOUP_ID}`);
   };
-
-  
+  layLogoRapFooter = () => {
+    return this.GET(`/api/QuanLyRap/LayThongTinHeThongRap`)
+  }
 }
 export const quanLyRapService = new QLRapService();

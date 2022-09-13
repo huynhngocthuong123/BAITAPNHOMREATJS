@@ -4,12 +4,15 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@headlessui/react": "^1.7.1",
+    "@heroicons/react": "^2.0.11",
     "@splidejs/react-splide": "^0.7.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.22.8",
     "axios": "^0.27.2",
+    "formik": "^2.2.9",
     "history": "^4.10.1",
     "install": "^0.13.0",
     "moment": "^2.29.4",
@@ -22,13 +25,16 @@
     "react-transition-group": "^4.4.5",
     "react-youtube": "^9.0.3",
     "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.1",
     "sas": "^3.0.4",
     "sass": "^1.54.8",
     "sass-loader": "^13.0.2",
     "styled": "^1.0.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "sweetalert2": "^11.4.32",
+    "web-vitals": "^2.1.4",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,7 +61,7 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.8",
+    "autoprefixer": "^10.4.9",
     "postcss": "^8.4.16",
     "tailwindcss": "^3.1.8"
   }

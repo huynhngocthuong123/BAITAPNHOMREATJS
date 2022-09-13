@@ -40,8 +40,7 @@
   overflow: hidden;
   overflow-y: scroll;
 }
-
-.rap_container.ant-tabs-nav-more {
+.ant-tabs-nav-more {
   display: none;
 }
 
