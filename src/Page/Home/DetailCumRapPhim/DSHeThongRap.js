@@ -138,9 +138,9 @@ export default function DetailRap(props) {
     });
   };
   return (
-    <div className="container" style={{ paddingLeft: 130 }}>
+    <div className="container" id="hethongrap" style={{ paddingLeft: 130 }}>
       <h6 className="title_hethong font-weight-bold">HỆ THỐNG RẠP</h6>
-      <div className="rap_container">
+      <div className="rap_container mb-5">
         <Tabs tabPosition="left">{renderDSRap()}</Tabs>
       </div>
     </div>

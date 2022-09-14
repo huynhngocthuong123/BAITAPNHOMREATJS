@@ -143,7 +143,7 @@ export default function NewsFeedFilm() {
     });
   };
   return (
-    <div className="NEWS pb-5">
+    <div className="NEWS pb-5" id="news">
       <div className="container mt-4">
         <div style={{ display: "flex", justifyContent: "center" }}>
           <button

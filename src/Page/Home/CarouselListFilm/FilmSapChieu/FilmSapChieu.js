@@ -40,9 +40,9 @@ export default function FilmSapChieu() {
                   </div>
                   <div className="Title_bottom">
                     <div>
-                      <p className="movieDanhGia mb-0">
+                      <div className="movieDanhGia mb-0">
                         <Rate className='rating' disabled defaultValue={item.danhGia / 2} />
-                      </p>
+                      </div>
                       <h1 className="movieName pt-2"> {item.tenPhim}</h1>
                     </div>
                     <div className="btn__chitiet">

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import YouTube from "react-youtube";
 
 export default function BannerTrailer(props) {
@@ -11,7 +11,7 @@ export default function BannerTrailer(props) {
     },
   };
   let renderTrailer = () => {
-    return showTrailer.map((id) => {
+    return showTrailer.map((id, index) => {
       return <YouTube className="youtube_trailer" videoId={id} opts={opts} />;
     });
   };

@@ -1,16 +1,14 @@
 import { quanLyRapService } from "../../Service/ServiceQLRap";
 import { CHI_TIET_PHIM } from "./Type/QLRapType";
 export const layDSRap = () => {
-  // xử lý thành công
   const result = quanLyRapService.layDSHeThongRap();
-  //   console.log("ketqua", result);
   return result;
 };
 
 export const LayThongTinChiTietPhim = (id) => {
   return async (dispatch2) => {
     try {
-     
+
       const result = await quanLyRapService.layThongTinLichChieuPhim(id);
       console.log(result);
 
