@@ -57,7 +57,7 @@ export default function DetailRap(props) {
                               fontWeight: 500,
                             }}
                           >
-                            Chi Tiết
+                            Xem Chi Tiết
                           </p>
                         </div>
                       </div>

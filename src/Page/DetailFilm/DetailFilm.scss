@@ -11,15 +11,15 @@
     }
   }
 }
-
-.ant-tabs-nav {
-  color: white;
-  .ant-tabs-tab {
-    font-size: 18px;
-    font-weight: 600;
+.movieInfo{ 
+  .ant-tabs-nav {
+    color: white;
+    .ant-tabs-tab {
+      font-size: 18px;
+      font-weight: 600;
+    }
   }
 }
-
 // ! sửa
 .ant-tabs-tab {
   opacity: 0.5;
@@ -28,7 +28,6 @@
   transition: all 0.6s;
   opacity: 1;
 }
-
 .movie__detail {
   .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: red;
@@ -37,7 +36,6 @@
     color: red;
   }
 }
-
 .lich-chieu {
   margin: auto;
   .btn {

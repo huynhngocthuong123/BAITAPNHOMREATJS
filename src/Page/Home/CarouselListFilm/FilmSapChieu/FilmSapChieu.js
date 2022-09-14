@@ -1,10 +1,11 @@
 import React from "react";
+import { Rate } from 'antd'
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 // import { Options } from "@splidejs/splide";
-import "./FilmSapChieu.css";
+import "./FilmSapChieu.scss";
 import { NavLink } from "react-router-dom";
 export default function FilmSapChieu() {
   let { DSFilmSapChieu } = useSelector((state) => {
@@ -29,7 +30,7 @@ export default function FilmSapChieu() {
           {DSFilmSapChieu.map((item, index) => {
             return (
               <SplideSlide key={index}>
-                <div>
+                <div className="FILM__SAPCHIEU">
                   <div className="movieItem">
                     <img
                       className="img_render img-fluid"
@@ -38,13 +39,30 @@ export default function FilmSapChieu() {
                     />
                   </div>
                   <div className="Title_bottom">
-                    {/* đánh giá code theo ngôi sao */}
-                    <p className="movieDanhGia mb-0">
-                      đánh giá :{item.danhGia}
-                    </p>
-                    <p className="movieName"> {item.tenPhim}</p>
+                    <div>
+                      <p className="movieDanhGia mb-0">
+                        <Rate className='rating' disabled defaultValue={item.danhGia / 2} />
+                      </p>
+                      <h1 className="movieName pt-2"> {item.tenPhim}</h1>
+                    </div>
+                    <div className="btn__chitiet">
+                      <NavLink
+                        className="button_Film"
+                        to={`/detail/${item.maPhim}`}
+                      >
+                        CHI TIẾT
+                      </NavLink>
+                    </div>
+                    <div className="btn__mua">
+                      <NavLink
+                        className="button_Film"
+                        to={`/detail/${item.maPhim}`}
+                      >
+                        MUA VÉ
+                      </NavLink>
+                    </div>
                   </div>
-                  <NavLink className='btn btn-primary btn__muave' to={`/detail/${item.maPhim}`}>Mua Vé</NavLink>
+
                 </div>
               </SplideSlide>
             );

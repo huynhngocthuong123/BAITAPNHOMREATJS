@@ -15,6 +15,7 @@ const MovieIntro = ({ film }) => {
   let trailer = film.trailer?.slice(30, film.trailer.legnth)
 
   const [hasid, setHasId] = useState('')
+  const [closeTrailer, setCloseTrailer] = useState(false); //ban đầu cho false để k hiện
   const showTrailer = (id) => {
     if ((hasid.length > 0))
       return < TrailerFilmDetail id={id} />
@@ -35,6 +36,7 @@ const MovieIntro = ({ film }) => {
               <img className='w-100 h-100' src={film.hinhAnh} alt="" />
               <div className='play__btn'>
                 <button onClick={() => {
+                  setCloseTrailer(true) // click button chạy trailer đồng thời hiện button close
                   setHasId(trailer)
                 }} className='fa fa-play'>
                 </button>
@@ -66,7 +68,20 @@ const MovieIntro = ({ film }) => {
           </div>
         </div>
       </div>
-      <div >{showTrailer(hasid)}</div>
+      {/* nếu closetrailer là true thì đồng nghĩa với hiện button close trailer + showtrailer */}
+      {closeTrailer == true ? <div className='show__trailer' >{showTrailer(hasid)}
+        <button
+          onClick={() => {
+            setCloseTrailer(false) // truyền ngược lại false để đóng button + showtrailer
+          }}
+          className="close_trailerFilm btn"
+        >
+          <i
+            style={{ color: "red", fontSize: "40px" }}
+            className="fa fa-times-circle"
+          ></i>
+        </button>
+      </div> : null}
     </div >
   )
 }

@@ -17,8 +17,6 @@ export default function DetailFilm(props) {
         dispatch(LayThongTinChiTietPhim(id));
     }, [])
 
-
-
     return (
         <div className='movieInfo'>
             <MovieIntro film={filmDetail} />
