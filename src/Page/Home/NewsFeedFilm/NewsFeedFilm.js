@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import "./NewsFeedFilm.css";
+import "./NewsFeedFilm.scss";
 export default function NewsFeedFilm() {
   const News1 = [
     {

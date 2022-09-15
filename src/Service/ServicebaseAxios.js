@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "../Redux/action/Type/TypeND";
-import { URL_API, TOKEN } from "../Util/setting";
+import { URL_API, TOKEN, TOKEN_ND } from "../Util/setting";
 import { GPOUP_ID } from "../Util/setting";
 
 export default class ServicebaseAxios {
@@ -20,7 +20,18 @@ export default class ServicebaseAxios {
       data: thongtinND,
       headers: {
         TokenCybersoft: TOKEN,
-        "Authorization": "Bearer" + localStorage.getItem(ACCESS_TOKEN)
+        "Authorization": "Bearer" + localStorage.getItem(TOKEN_ND)
+      },
+    });
+  };
+  PUT = (url, thongtinND) => {
+    return axios({
+      method: "put",
+      url: `${URL_API}/${url}`,
+      data: thongtinND,
+      headers: {
+        TokenCybersoft: TOKEN,
+        "Authorization": "Bearer " + localStorage.getItem(TOKEN_ND)
       },
     });
   };
