@@ -56,11 +56,14 @@ export default function Login() {
                                 <div className="text-danger">{formik.errors.matKhau}</div>
                             ) : null}
                         </div>
-                        <button type='submit' className='btn btn-success'>Đăng Nhập</button>
+                        <div className='button_login'>
 
-                        <NavLink to="/register">
-                            <button type='button' className='btn btn-success'>Đăng Ký tài khoản</button>
-                        </NavLink>
+                            <button type='submit' className='btn btn-success'>Đăng Nhập</button>
+
+                            <NavLink to="/register">
+                                <button type='button' className='btn btn-success'>Đăng Ký tài khoản</button>
+                            </NavLink>
+                        </div>
 
                     </form>
                 </div>

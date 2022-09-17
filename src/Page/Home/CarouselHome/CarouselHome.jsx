@@ -22,7 +22,6 @@ export default function CarouselHome() {
     });
 
     const contentStyle = {
-        height: "100vh",
         backgroundSize: "100%",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -32,8 +31,8 @@ export default function CarouselHome() {
         mangBanner.map((item, index) => {
             return (
                 <div key={index}>
-                    <div
-                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative", height: 870 }}
+                    <div className="img__BG"
+                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative" }}
                     >
                         <div className="img_play_carousel">
                             {playButton ? <button onClick={() => {
@@ -48,7 +47,7 @@ export default function CarouselHome() {
                                 /></button> : null}
                         </div>
                     </div>
-                </div>
+                </div >
             );
         });
     const renderTrailer = (id) => {
@@ -60,7 +59,9 @@ export default function CarouselHome() {
     }
     return (
         <div className="carousel_BG">
-            <Carousel autoplay>{renderBanner()}</Carousel>
+            <div className="carousel_banner">
+                <Carousel autoplay>{renderBanner()}</Carousel>
+            </div>
             {closeTrailer ? (
                 <div>
                     {<BannerTrailer prop={showTrailer} />}

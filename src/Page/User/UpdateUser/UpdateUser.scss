@@ -1,0 +1,18 @@
+.update{
+    .form_update{
+        padding-top: 15px;
+        .form-group{
+            margin-bottom: 5px;
+            label{
+                margin-bottom: 0;
+            }
+        }
+        button{
+            margin:  0 auto;
+            background-color: rgb(53, 166, 53);
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+        }
+    }
+}

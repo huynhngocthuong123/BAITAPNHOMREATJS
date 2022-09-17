@@ -5,6 +5,7 @@ let user = null
 if (localStorage.getItem(USER_ND)) {
     user = JSON.parse(localStorage.getItem(USER_ND))
 }
+// console.log(localStorage.getItem(USER_ND), "Usser người dùng")
 const initialState = {
     UserLogin: user,
     NDRegister: {},
@@ -28,7 +29,8 @@ export const QLNDReducer = (state = initialState, action) => {
         case CAP_NHAP:
             state.UserLogin = action.dataCN
             localStorage.setItem(USER_ND, JSON.stringify(action.dataCN))
-            localStorage.setItem(TOKEN_ND, action.dataCN.accessToken)
+            localStorage.setItem(TOKEN_ND, action.token.slice(8))
+            // console.log(state, "thông tin đã cập nhập")
             return { ...state }
         default:
             return state

@@ -13,11 +13,18 @@
   }
 }
 .carousel_BG{
+  .carousel_banner{
+    .img__BG{
+      height: 870px;
+    }
+  }
   .ant-carousel .slick-dots{
     z-index: 0;
   }
 }
 .youtube_trailer {
+  width: 850px;
+  height: 450px;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,3 +36,32 @@
   top: 26%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width:740px) {
+  
+}
+@media only screen and (min-width:740px) and  (max-width:1024px) {
+  .carousel_BG{
+    .carousel_banner{
+      .img__BG{
+        height: 400px;
+      }
+    }
+    .trailer{
+      .youtube_trailer {
+        height: 220px;
+        width: 415px;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .close_trailer {
+      position: absolute;
+      left: 78%;
+      top: 9%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+

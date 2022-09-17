@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { GPOUP_ID, TOKEN_ND } from '../../../Util/setting';
 import { useDispatch } from 'react-redux';
 import { updateUser } from '../../../Redux/action/QLUserAction';
+import "./UpdateUser.scss"
 export default function UpdateUser(props) {
     // console.log(props.UserLogin, "lấy thành công")
     // console.log(localStorage.getItem(TOKEN_ND))
@@ -37,17 +38,10 @@ export default function UpdateUser(props) {
     });
     return (
         <div className='update'>
-            <form onSubmit={formik.handleSubmit} className='form_rigister'>
+            <form onSubmit={formik.handleSubmit} className='form_update'>
+                <h1 className=''>Tài Khoản : {taiKhoan}</h1>
                 <div className="form-group">
-                    <label htmlFor="taiKhoan">Tài Khoản</label>
-                    <input onChange={formik.handleChange}
-                        value={taiKhoan} type="text" className="form-control" id="taiKhoan" name='taiKhoan' placeholder="Nhập tài khoản" />
-                    {formik.touched.taiKhoan && formik.errors.taiKhoan ? (
-                        <div className="text-danger">{formik.errors.taiKhoan}</div>
-                    ) : null}
-                </div>
-                <div className="form-group">
-                    <label htmlFor="matKhau">Mật Khẩu Mới</label>
+                    <label htmlFor="matKhau">Mật khẩu</label>
                     <input onChange={formik.handleChange}
                         value={formik.values.matKhau} type="password" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu mới" />
                     {formik.touched.matKhau && formik.errors.matKhau ? (
@@ -78,7 +72,7 @@ export default function UpdateUser(props) {
                         <div className="text-danger">{formik.errors.hoTen}</div>
                     ) : null}
                 </div>
-                <button type='submit' className='btn btn-success'>Cập Nhập</button>
+                <button type='submit' className='btn btn-success d-block'>Cập Nhập</button>
             </form>
         </div>
     )

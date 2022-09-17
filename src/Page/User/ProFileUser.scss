@@ -28,13 +28,14 @@
         }
     }
     .modal_tongle{
-        height: 600px;
+        display: block;
+        max-height: 600px;
         border-radius: 15px;
         padding: 20px;
         background-color: rgb(156, 152, 127);
         position: absolute;
-        top: 30%;
+        top: 100px;
         left: 50%;
-        transform: translate(-50%,20%);
+        transform: translate(-50%,0);
     }
 }
