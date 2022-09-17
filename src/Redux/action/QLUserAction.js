@@ -52,3 +52,27 @@ export const DangNhapAction = (thongTinND) => {
         }
     }
 }
+
+export const ThongTinNDAction = (thongTinND) => {
+    return async (dispatch2) => {
+        try {
+            const result = await NDService.dangNhapND(thongTinND);
+            if (result.data.statusCode == 200) {
+                await dispatch2({
+                    type: DANG_NHAP,
+                    dataDN: result.data.content
+                });
+                await Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Đăng nhập thành công',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                history.push(`home/${result.data.content.taiKhoan}`);
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}

@@ -11,7 +11,7 @@
     }
   }
 }
-.movieInfo{ 
+.movieInfo {
   .ant-tabs-nav {
     color: white;
     .ant-tabs-tab {
@@ -48,6 +48,7 @@
       font-weight: 700;
       min-width: 20%;
       padding: 10px;
+      margin-bottom: 10px;
       width: 100px;
       &:hover {
         color: red;

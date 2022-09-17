@@ -12,7 +12,7 @@ export const QuanLyDatVeReducer = (state = initialState, action) => {
             state.chiTietPhongve = action.chiTietPhongve
             return { ...state }
         case DAT_VE:
-            // console.log(action)
+            // console.log(state.danhSachGheDangDat);
 
             let UpdateGhe = [...state.danhSachGheDangDat];
             //? tìm từng vị trí trong UpdateGhe xem có = GheDuocChonj không, nếu = thì xóa đi, nếu không trùng thì push vào ghế đang đặt. rồi return ghế đang đặt = updateghe

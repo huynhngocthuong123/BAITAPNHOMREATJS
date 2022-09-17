@@ -7,7 +7,7 @@ import { QLNDReducer } from '../../Redux/Reducers/NDReducers'
 export default function Header() {
     let { UserLogin } = useSelector((state) => state.QLNDReducer)
     const dispatch = useDispatch()
-    console.log(UserLogin, "lấy ok")
+    // console.log(UserLogin, "lấy ok")
     return (
         <nav className="HEADER">
             <div className='header_content'>

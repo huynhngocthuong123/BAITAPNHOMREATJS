@@ -8,6 +8,7 @@ if (localStorage.getItem(USER_ND)) {
 const initialState = {
     UserLogin: user,
     NDRegister: {},
+    thongTinND: {},
 }
 export const QLNDReducer = (state = initialState, action) => {
     switch (action.type) {

@@ -20,7 +20,7 @@ export default class ServicebaseAxios {
       data: thongtinND,
       headers: {
         TokenCybersoft: TOKEN,
-        "Authorization": "Bearer" + localStorage.getItem(ACCESS_TOKEN)
+        "Authorization": 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
       },
     });
   };

@@ -8,6 +8,12 @@ export class QLDatVeServices extends ServicebaseAxios {
             `api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`
         )
     }
+
+    datVe = (thongTinDatVe) => {
+        return this.POST(
+            `api/QuanLyDatVe/DatVe`, thongTinDatVe,
+        )
+    }
 }
 
 export const QuanLyDatVeServices = new QLDatVeServices();
