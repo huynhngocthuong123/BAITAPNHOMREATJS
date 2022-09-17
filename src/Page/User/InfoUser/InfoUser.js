@@ -1,18 +1,21 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 // import "../infoUser.scss"
 import "./InfoUser.scss"
 
 export default function InfoUser(props) {
     // console.log(props.UserLogin, "lấy thành công")
-    let { taiKhoan, maLoaiNguoiDung, hoTen, soDT, email } = props.UserLogin
+    const { UserLogin } = useSelector(state => state.QLNDReducer)
+    // let { taiKhoan, maLoaiNguoiDung, hoTen, soDT, email } = UserLogin
+    console.log('userLogin:::::::::::::', UserLogin)
     return (
         <div className='Info'>
             <ul>
-                <li className='info_title'>Tên Tài Khoản : {taiKhoan}</li>
-                <li className='info_title'>Số Điện Thoại : {soDT}</li>
-                <li className='info_title'>Họ và Tên : {hoTen} </li>
-                <li className='info_title'>Email : {email}</li>
-                <li className='info_title'>Mã Loại Người Dùng : {maLoaiNguoiDung}</li>
+                <li className='info_title'>Tên Tài Khoản : {UserLogin?.taiKhoan}</li>
+                <li className='info_title'>Số Điện Thoại : {UserLogin?.soDT}</li>
+                <li className='info_title'>Họ và Tên : {UserLogin?.hoTen} </li>
+                <li className='info_title'>Email : {UserLogin?.email}</li>
+                <li className='info_title'>Mã Loại Người Dùng : {UserLogin?.maLoaiNguoiDung}</li>
             </ul>
         </div>
     )

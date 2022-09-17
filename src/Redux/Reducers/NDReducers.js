@@ -5,7 +5,6 @@ let user = null
 if (localStorage.getItem(USER_ND)) {
     user = JSON.parse(localStorage.getItem(USER_ND))
 }
-// console.log(localStorage.getItem(USER_ND), "Usser người dùng")
 const initialState = {
     UserLogin: user,
     NDRegister: {},
