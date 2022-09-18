@@ -51,7 +51,7 @@ export default function Login() {
                         <div className="form-group">
                             <label htmlFor="matKhau">Mật Khẩu</label>
                             <input onChange={formik.handleChange}
-                                value={formik.values.matKhau} type="password" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
+                                value={formik.values.matKhau} type="text" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
                             {formik.touched.matKhau && formik.errors.matKhau ? (
                                 <div className="text-danger">{formik.errors.matKhau}</div>
                             ) : null}

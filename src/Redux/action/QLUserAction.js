@@ -60,7 +60,7 @@ export const updateUser = (thongTinND) => {
             if (result.data.statusCode == 200) {
                 await dispatch2({
                     type: CAP_NHAP,
-                    dataCN: result.config.data,
+                    dataCN: JSON.parse(result.config.data),
                     token: result.config.headers.Authorization
                 });
                 await Swal.fire({
@@ -70,11 +70,6 @@ export const updateUser = (thongTinND) => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                await dispatch2({
-                    type: DANG_XUAT,
-                    dataDX: null
-                })
-                history.push("/login")
             }
         } catch (error) {
             console.log(error)

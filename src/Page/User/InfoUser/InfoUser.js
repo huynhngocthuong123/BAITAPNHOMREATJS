@@ -1,10 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 // import "../infoUser.scss"
 import "./InfoUser.scss"
 
 export default function InfoUser(props) {
     // console.log(props.UserLogin, "lấy thành công")
-    let { taiKhoan, maLoaiNguoiDung, hoTen, soDT, email } = props.UserLogin
+    const { UserLogin } = useSelector(state => state.QLNDReducer)
+    let { taiKhoan, maLoaiNguoiDung, hoTen, soDT, email } = UserLogin
+    console.log('userLogin:::::::::::::', UserLogin)
     return (
         <div className='thongtintaikhoan'>
             <div className="thongtintaikhoan__content">
@@ -24,7 +27,6 @@ export default function InfoUser(props) {
                     <p className='item__title'>Email</p>
                     <p className='item__content'>{email}</p>
                 </div>
-
             </div>
         </div>
     )

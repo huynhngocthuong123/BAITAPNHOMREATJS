@@ -1,13 +1,16 @@
+#hethongrap {
+  padding-left: 130px;
+}
 .rap_container {
   box-shadow: 2px 0 15px 1px rgba(2, 2, 2, 0.348);
   max-width: 1250px;
   padding: 25px;
   border-radius: 10px;
   transition: all 0.5s;
-}
-.rap_container:hover {
-  transition: all 0.5s;
-  transform: scale(1.01);
+  &:hover {
+    transition: all 0.5s;
+    transform: scale(1.01);
+  }
 }
 .title_hethong {
   font-size: 30px;
@@ -66,11 +69,11 @@
   border-radius: 10px;
   border: 2px solid white;
   transition: all 0.2s;
-}
-.lichchieu_time:hover {
-  transition: all 0.5s;
-  border: 2px solid #5cbd2b7e;
-  opacity: 1;
+  &:hover {
+    transition: all 0.5s;
+    border: 2px solid #5cbd2b7e;
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 740px) and (max-width: 1024px) {

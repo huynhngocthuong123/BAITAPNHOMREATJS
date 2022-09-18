@@ -17,7 +17,7 @@ export default function UpdateUser(props) {
             matKhau: '',
             email: email,
             maLoaiNguoiDung: "khachHang",
-            soDt: soDT,
+            soDT: soDT,
             hoTen: hoTen,
             maNhom: GPOUP_ID,
         },
@@ -25,13 +25,10 @@ export default function UpdateUser(props) {
             taiKhoan: Yup.string().required("Tài khoản không được để trống").min(6, "Tối thiểu đủ 6 kí tự").max(20, "Tối đa 10 kí tự").matches(/^[A-Z a-z]+$/, "Tài khoản không được có kí tự đặc biệt"),
             matKhau: Yup.string().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,}$/, "Mật khẩu tối thiếu từ 6 kí tự (Gồm ít nhất 1 chữ in hoa,1 kí tự,1 số) ").required("Mật khẩu không được để trống"),
             email: Yup.string().required("Mật khẩu không để trống").email("Email không đúng format"),
-            soDt: Yup.string().required("Số điện thoại không để trống"),
+            soDT: Yup.string().required("Số điện thoại không để trống"),
             hoTen: Yup.string().required("Họ tên không để trống")
-            // .matches(/^[A-Z a-z]+$/, "Họ tên không hợp lệ")
         }),
         onSubmit: values => {
-            // console.log("du lieu đã chỉnh sửa", values)
-            // dispatch(DangKyAction(values))
             dispatch(updateUser(values))
 
         },
@@ -57,11 +54,11 @@ export default function UpdateUser(props) {
                     ) : null}
                 </div>
                 <div className="form-group">
-                    <label htmlFor="soDt">Số Điện Thoại</label>
+                    <label htmlFor="soDT">Số Điện Thoại</label>
                     <input onChange={formik.handleChange}
-                        value={formik.values.soDt} type="text" className="form-control" id="soDt" name='soDt' placeholder="Nhập số điện thoại" />
-                    {formik.touched.soDt && formik.errors.soDt ? (
-                        <div className="text-danger">{formik.errors.soDt}</div>
+                        value={formik.values.soDT} type="text" className="form-control" id="soDT" name='soDT' placeholder="Nhập số điện thoại" />
+                    {formik.touched.soDT && formik.errors.soDT ? (
+                        <div className="text-danger">{formik.errors.soDT}</div>
                     ) : null}
                 </div>
                 <div className="form-group">

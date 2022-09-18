@@ -27,3 +27,8 @@
       font-size: 15px;
     }
   }
+  @media only screen and (min-width:740px) and  (max-width:1024px) {
+    .button_Carousel {
+      margin-top: 0;
+    }
+  }
