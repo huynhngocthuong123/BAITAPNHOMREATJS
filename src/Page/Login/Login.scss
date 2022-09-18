@@ -57,11 +57,11 @@
                     font-weight: 500;
                 }
             }
-            button{
+            .button_login{
+                display: flex;
+                justify-content: space-evenly;
+                margin: auto;
                 margin-top: 20px;
-                margin-left: 23%;
-                
-
             }
         }
     }

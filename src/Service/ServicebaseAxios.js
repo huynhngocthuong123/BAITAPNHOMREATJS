@@ -1,6 +1,6 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "../Redux/action/Type/TypeND";
-import { URL_API, TOKEN } from "../Util/setting";
+import { URL_API, TOKEN, TOKEN_ND } from "../Util/setting";
 import { GPOUP_ID } from "../Util/setting";
 
 export default class ServicebaseAxios {

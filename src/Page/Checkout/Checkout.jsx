@@ -94,7 +94,7 @@ export default function Checkout(props) {
                     if (result.isConfirmed) {
                         window.location.reload();
                     } else if (result.isDenied) {
-                        history.push("/history");
+                        history.push("/info");
                     }
                 });
             } else if (result.isDenied) {
@@ -184,7 +184,7 @@ export default function Checkout(props) {
                                     data-toggle="modal"
                                     data-target="#modalConfirm"
                                     onClick={() => {
-                                        if (danhSachGheDangDat.length == 0) {
+                                        if (danhSachGheDangDat.length === 0) {
                                             setDisabled(true)
                                         }
                                         else {

@@ -8,7 +8,10 @@ export class QLNDService extends ServicebaseAxios {
     dangNhapND = (thongTinDangNhap) => {
         return this.POST("/api/QuanLyNguoiDung/DangNhap", thongTinDangNhap);
     }
-    thongTinNguoiDung = () => {
+    capNhapND = (thongTinCapNhap) => {
+        return this.PUT("/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung", thongTinCapNhap);
+    }
+    thongTinND = () => {
         return this.POST("/api/QuanLyNguoiDung/ThongTinTaiKhoan");
     }
 }

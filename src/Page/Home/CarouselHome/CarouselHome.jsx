@@ -3,7 +3,7 @@ import { Carousel } from "antd";
 import { layDSBanner } from "../../../Redux/action/CarouselAction";
 import { useDispatch, useSelector } from "react-redux";
 import YouTube from "react-youtube";
-import "./CarouselHome.css";
+import "./CarouselHome.scss";
 import BannerTrailer from "./BannerTrailer/BannerTrailer";
 
 export default function CarouselHome() {
@@ -11,7 +11,7 @@ export default function CarouselHome() {
     { maTrailer: 1283, trailer: "kBY2k3G6LsM" },
     { maTrailer: 1284, trailer: "NYH2sLid0Zc" },]
     let [showTrailer, setShowtrailer] = useState();
-    let [play, setPlay] = useState(false);
+    let [closeTrailer, setCloseTrailer] = useState(false);
     let [playButton, setPlayButton] = useState(true);
     let dispacth = useDispatch();
     useEffect(() => {
@@ -22,7 +22,6 @@ export default function CarouselHome() {
     });
 
     const contentStyle = {
-        height: "100vh",
         backgroundSize: "100%",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -32,23 +31,23 @@ export default function CarouselHome() {
         mangBanner.map((item, index) => {
             return (
                 <div key={index}>
-                    <div
-                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative", height: 870 }}
+                    <div className="img__BG"
+                        style={{ ...contentStyle, backgroundImage: `url(${item.hinhAnh})`, position: "relative" }}
                     >
                         <div className="img_play_carousel">
                             {playButton ? <button onClick={() => {
-                                setPlay(true);
+                                setCloseTrailer(true);
                                 setPlayButton(false);
                                 renderTrailer(item.maPhim)
                             }}> <img
                                     className="img-fluid"
                                     style={{ height: "100px" }}
-                                    src="./img/play.png"
+                                    src="../img/play.png"
                                     alt=""
                                 /></button> : null}
                         </div>
                     </div>
-                </div>
+                </div >
             );
         });
     const renderTrailer = (id) => {
@@ -59,14 +58,16 @@ export default function CarouselHome() {
         setShowtrailer(okla)
     }
     return (
-        <div className="carousel_BG pb-4">
-            <Carousel autoplay>{renderBanner()}</Carousel>
-            {play ? (
+        <div className="carousel_BG">
+            <div className="carousel_banner">
+                <Carousel autoplay>{renderBanner()}</Carousel>
+            </div>
+            {closeTrailer ? (
                 <div>
                     {<BannerTrailer prop={showTrailer} />}
                     <button
                         onClick={() => {
-                            setPlay(false);
+                            setCloseTrailer(false);
                             setPlayButton(true);
                         }}
                         className="close_trailer btn"

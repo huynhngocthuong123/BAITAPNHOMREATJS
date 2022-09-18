@@ -3,7 +3,7 @@ import { DSFilm } from "../../../Redux/action/FilmAction";
 import { useDispatch } from "react-redux";
 import FilmSapChieu from "./FilmSapChieu/FilmSapChieu";
 import FilmDangChieu from "./FilmDangChieu/FilmDangChieu";
-import "./CarouselListFilm.css";
+import "./CarouselListFilm.scss";
 
 export default function CarouselListFilm() {
   const dispatch = useDispatch();

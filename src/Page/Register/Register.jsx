@@ -20,11 +20,12 @@ export default function Register() {
             maNhom: GPOUP_ID,
         },
         validationSchema: Yup.object({
-            taiKhoan: Yup.string().required("Tài khoản không được để trống").min(6, "Tối thiểu đủ 6 kí tự").max(10, "Tối đa 10 kí tự").matches(/^[A-Z a-z]+$/, "Tài khoản không được có kí tự đặc biệt"),
+            taiKhoan: Yup.string().required("Tài khoản không được để trống").min(6, "Tối thiểu đủ 6 kí tự").max(20, "Tối đa 10 kí tự").matches(/^[A-Z a-z]+$/, "Tài khoản không được có kí tự đặc biệt"),
             matKhau: Yup.string().matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{6,}$/, "Mật khẩu tối thiếu từ 6 kí tự (Gồm ít nhất 1 chữ in hoa,1 kí tự,1 số) ").required("Mật khẩu không được để trống"),
             email: Yup.string().required("Mật khẩu không để trống").email("Email không đúng format"),
             soDt: Yup.string().required("Số điện thoại không để trống"),
-            hoTen: Yup.string().required("Họ tên không để trống").matches(/^[A-Z a-z]+$/, "Họ tên không hợp lệ")
+            hoTen: Yup.string().required("Họ tên không để trống")
+            // .matches(/^[A-Z a-z]+$/, "Họ tên không hợp lệ")
         }),
         onSubmit: values => {
             console.log("du lieu", values)
@@ -55,7 +56,7 @@ export default function Register() {
                         <div className="form-group">
                             <label htmlFor="matKhau">Mật Khẩu</label>
                             <input onChange={formik.handleChange}
-                                value={formik.values.matKhau} type="text" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
+                                value={formik.values.matKhau} type="password" className="form-control" id="matKhau" name='matKhau' placeholder="Nhập mật khẩu" />
                             {formik.touched.matKhau && formik.errors.matKhau ? (
                                 <div className="text-danger">{formik.errors.matKhau}</div>
                             ) : null}

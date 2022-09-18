@@ -5,7 +5,7 @@ import { Fragment } from "react";
 import { useDispatch } from "react-redux";
 import { layDSRap } from "../../../Redux/action/HeThongRapAction";
 import moment from "moment/moment";
-import "./DSHeThongRap.css";
+import "./DSHeThongRap.scss";
 import { NavLink } from "react-router-dom";
 export default function DetailRap(props) {
   const { TabPane } = Tabs;
