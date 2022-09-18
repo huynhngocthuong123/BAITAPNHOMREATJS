@@ -1,4 +1,4 @@
-#hethongrap{
+#hethongrap {
   padding-left: 130px;
 }
 .rap_container {
@@ -10,7 +10,7 @@
   &:hover {
     transition: all 0.5s;
     transform: scale(1.01);
-}
+  }
 }
 .title_hethong {
   font-size: 30px;
@@ -75,15 +75,15 @@
     opacity: 1;
   }
 }
-@media only screen and (min-width:740px) and  (max-width:1024px) {
-  #hethongrap{
+
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  #hethongrap {
     padding: 15px;
     .lichchieu {
       // width: 70px;
       max-height: 80px;
       overflow-y: scroll;
       grid-template-columns: repeat(2, 1fr);
-
     }
     .lichchieu_item {
       padding: 2px;

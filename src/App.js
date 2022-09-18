@@ -8,8 +8,12 @@ import DetailFilm from "./Page/DetailFilm/DetailFilm";
 import { createBrowserHistory } from "history";
 import { HomeTemplate } from "./templete/HomeTemplate/HomeTemplate";
 import { Usertemplate } from "./templete/UserTeamplate/Usertemplate";
+import { CheckoutTemplate } from "./templete/CheckoutTemplate/CheckoutTemplate";
 import Register from "./Page/Register/Register";
 import Login from "./Page/Login/Login";
+import Checkout from "./Page/Checkout/Checkout";
+import InfoAccount from "./Page/User/InfoAccount/InfoAccount";
+import InfoTicketBooked from "./Page/User/InfoTicketBooked/InfoTicketBooked";
 
 
 export const history = createBrowserHistory()
@@ -22,7 +26,9 @@ function App() {
       <Route exact path="/detail/:id" component={DetailFilm} />
       <Usertemplate exact path="/register" Component={Register} />
       <Usertemplate exact path="/login" Component={Login} />
-
+      <CheckoutTemplate exact path="/checkout/:id" component={Checkout} />
+      <CheckoutTemplate exact path="/info" component={InfoAccount} />
+      <Route exact path="/historyticket" component={InfoTicketBooked} />
     </Router>
   );
 }

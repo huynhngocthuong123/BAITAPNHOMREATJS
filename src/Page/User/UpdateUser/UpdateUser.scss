@@ -1,18 +1,19 @@
-.update{
-    .form_update{
-        padding-top: 15px;
-        .form-group{
-            margin-bottom: 5px;
-            label{
-                margin-bottom: 0;
-            }
-        }
-        button{
-            margin:  0 auto;
-            background-color: rgb(53, 166, 53);
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
-        }
+.update {
+  .form_update {
+    padding: 20px 100px;
+    .form-group {
+      margin-bottom: 20px;
+      label {
+        margin-bottom: 0;
+        font-size: 20px;
+      }
     }
+    button {
+      margin: 0 auto;
+      background-color: rgb(53, 166, 53);
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+    }
+  }
 }

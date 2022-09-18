@@ -1,6 +1,6 @@
 import React from 'react'
 import { NDService } from '../../Service/QLNDService';
-import { CAP_NHAP, DANG_KY, DANG_NHAP, DANG_XUAT } from './Type/TypeND';
+import { CAP_NHAP, DANG_KY, DANG_NHAP, DANG_XUAT, THONG_TINND } from './Type/TypeND';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { history } from '../../App';
 export const DangKyAction = (thongTinND) => {
@@ -76,3 +76,18 @@ export const updateUser = (thongTinND) => {
         }
     }
 }
+
+export const thongTinNDAction = () => {
+    return async (dispatch2) => {
+        try {
+            const result = await NDService.thongTinND();
+            dispatch2({
+                type: THONG_TINND,
+                thongTinND: result.data.content,
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+

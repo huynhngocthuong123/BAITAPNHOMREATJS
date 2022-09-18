@@ -27,7 +27,7 @@ const ShowTime = ({ film }) => {
                                 <div className='lich-chieu'>
                                     <div className="row">
                                         {cumRap.lichChieuPhim?.slice(0, 10).map((lichchieu, index) => {
-                                            return <NavLink to="/" className='col-3' key={index}>
+                                            return <NavLink to={`/checkout/${lichchieu.maLichChieu}`} className='col-3' key={index}>
                                                 <p className='btn btn-time'>
                                                     {moment(lichchieu.ngayChieuGioChieu).format('hh:mm A')}
                                                 </p>
@@ -37,12 +37,10 @@ const ShowTime = ({ film }) => {
                                 </div>
                             </div>
                         })}
-
                     </Tabs.TabPane>
                 })}
             </Tabs>
         </div>
     )
 }
-
 export default ShowTime

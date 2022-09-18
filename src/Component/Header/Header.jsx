@@ -9,6 +9,8 @@ import React, { useState, Fragment } from 'react';
 export default function Header() {
 
     let { UserLogin } = useSelector((state) => state.QLNDReducer)
+    const dispatch = useDispatch()
+    // console.log(UserLogin, "lấy ok")
     return (
         <nav className="HEADER">
             <div className='header_content'>

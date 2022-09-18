@@ -36,7 +36,7 @@ export default function UpdateUser(props) {
     return (
         <div className='update'>
             <form onSubmit={formik.handleSubmit} className='form_update'>
-                <h1 className=''>Tài Khoản : {taiKhoan}</h1>
+                {/* <h1 className=''>Tài Khoản : {taiKhoan}</h1> */}
                 <div className="form-group">
                     <label htmlFor="matKhau">Mật khẩu</label>
                     <input onChange={formik.handleChange}

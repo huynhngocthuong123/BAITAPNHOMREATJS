@@ -1,5 +1,5 @@
 import { TOKEN_ND, USER_ND } from "../../Util/setting"
-import { CAP_NHAP, DANG_KY, DANG_NHAP, DANG_XUAT } from "../action/Type/TypeND"
+import { CAP_NHAP, DANG_KY, DANG_NHAP, DANG_XUAT, THONG_TINND } from "../action/Type/TypeND"
 import { history } from '../../App';
 let user = null
 if (localStorage.getItem(USER_ND)) {
@@ -8,6 +8,7 @@ if (localStorage.getItem(USER_ND)) {
 const initialState = {
     UserLogin: user,
     NDRegister: {},
+    thongTinND: {},
 }
 console.log(initialState.UserLogin, "user")
 export const QLNDReducer = (state = initialState, action) => {
@@ -30,6 +31,9 @@ export const QLNDReducer = (state = initialState, action) => {
             localStorage.setItem(USER_ND, JSON.stringify(action.dataCN))
             localStorage.setItem(TOKEN_ND, action.token.slice(8))
             // console.log(state, "thông tin đã cập nhập")
+            return { ...state }
+        case THONG_TINND:
+            state.thongTinND = action.thongTinND
             return { ...state }
         default:
             return state

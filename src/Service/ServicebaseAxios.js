@@ -20,18 +20,7 @@ export default class ServicebaseAxios {
       data: thongtinND,
       headers: {
         TokenCybersoft: TOKEN,
-        "Authorization": "Bearer" + localStorage.getItem(TOKEN_ND)
-      },
-    });
-  };
-  PUT = (url, thongtinND) => {
-    return axios({
-      method: "put",
-      url: `${URL_API}/${url}`,
-      data: thongtinND,
-      headers: {
-        TokenCybersoft: TOKEN,
-        "Authorization": "Bearer " + localStorage.getItem(TOKEN_ND)
+        "Authorization": 'Bearer ' + localStorage.getItem(ACCESS_TOKEN)
       },
     });
   };
