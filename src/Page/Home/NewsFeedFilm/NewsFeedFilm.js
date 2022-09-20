@@ -92,12 +92,11 @@ export default function NewsFeedFilm() {
             <img src={product.img} className="img-fluid" />
             <div className="card-body">
               <h6
-                style={{ fontSize: 20, height: 50 }}
                 className="card-title font-weight-bold"
               >
                 {product.title}
               </h6>
-              <p style={{ maxHeight: "80px" }} className="card-text">
+              <p className="card-text">
                 {product.content}
               </p>
             </div>
@@ -123,12 +122,11 @@ export default function NewsFeedFilm() {
             <img src={product.img} className="img-fluid" />
             <div className="card-body p-3">
               <h6
-                style={{ fontSize: 20, height: 50 }}
                 className="card-title font-weight-bold"
               >
                 {product.title}
               </h6>
-              <p style={{ maxHeight: "80px" }} className="card-text">
+              <p className="card-text">
                 {product.content}
               </p>
             </div>

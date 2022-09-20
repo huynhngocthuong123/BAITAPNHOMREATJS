@@ -54,3 +54,36 @@
         }
     }
 }
+@media only screen and (min-width:740px) and (max-width:1024px) {
+    .HEADER{
+        .header_content{
+            .header_left{
+                img{
+                    height: 50px;
+                    width: 50px;
+
+                }
+            }
+            .header_center{
+                padding: 0;
+                .center_title{
+                    padding: 0 10px;
+                    font-size: 10px;
+                }
+            }
+            .header_right{
+                .title_right{
+                    font-size:10px;
+                    padding-right: 10px;
+                    // margin-right: 5px;
+                }
+                .dropdown{
+                    img{
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

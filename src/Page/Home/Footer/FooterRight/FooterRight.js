@@ -58,10 +58,10 @@ export default function FooterRight() {
                     <Form.Item name={['user', 'introduction']} >
                         <Input.TextArea className='right_input' placeholder='Nhập nội dung cần quan tâm' />
                     </Form.Item>
-                    <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-                        <Button type="primary" htmlType="submit">
+                    <Form.Item >
+                        <button type="submit" className='btn btn-success'>
                             ĐĂNG KÍ THÔNG TIN
-                        </Button>
+                        </button>
                     </Form.Item>
                 </Form>
             </div>

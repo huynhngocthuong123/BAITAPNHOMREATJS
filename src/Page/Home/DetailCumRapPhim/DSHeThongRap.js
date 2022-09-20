@@ -21,7 +21,6 @@ export default function DetailRap(props) {
           tab={
             <Fragment>
               <img
-                style={{ height: "50px", width: "50px" }}
                 src={loaiRap.logo}
                 alt=""
               />
@@ -42,7 +41,6 @@ export default function DetailRap(props) {
                     <div className="AAA" style={{ width: 320 }}>
                       <div className="d-flex">
                         <img
-                          style={{ height: "50px", width: "50px" }}
                           src={loaiRap.logo}
                           alt=""
                         />
@@ -50,7 +48,7 @@ export default function DetailRap(props) {
                           <p className="title_rap" style={Pstyle}>
                             {CumRap.tenCumRap}
                           </p>
-                          <p
+                          <p className="title_chitiet"
                             style={{
                               textAlign: "left",
                               color: "red",
@@ -69,12 +67,11 @@ export default function DetailRap(props) {
                     return (
                       <Fragment key={index}>
                         <div
-                          className=" mb-3 border-bottom pb-2"
+                          className=" mb-3 border-bottom"
                           style={{ display: "flex" }}
                         >
                           <img
-                            className="img-fluid"
-                            style={{ height: "80px", width: "80px" }}
+                            className="img_right img-fluid"
                             src={DSfilm.hinhAnh}
                             alt=""
                             onError={(e) => (
@@ -84,25 +81,22 @@ export default function DetailRap(props) {
                             )}
                           />
                           <div className="ml-2">
-                            <h6 style={{ fontSize: "17px" }} className="mb-0">
+                            <h6 className="name_film mb-0">
                               {DSfilm.tenPhim}
                             </h6>
                             {DSfilm.hot === true ? (
-                              <div>
+                              <div className="rate">
                                 <i
-                                  style={{ color: "red", fontSize: "11px" }}
-                                  className="fa fa-heart mr-2"
+                                  className="icon_heart fa fa-heart mr-2"
                                 ></i>
-                                <span
-                                  style={{ color: "red", fontSize: "11px" }}
-                                >
+                                <span className="title_filmhot">
                                   PHIM HOT
                                 </span>
                               </div>
                             ) : (
                               <p></p>
                             )}
-                            <p style={Pstyle}>{CumRap.diaChi}</p>
+                            <p className="title_add" style={Pstyle}>{CumRap.diaChi}</p>
                             <div className="lichchieu">
                               {DSfilm.lstLichChieuTheoPhim
                                 ?.slice(0, 15)
@@ -140,7 +134,7 @@ export default function DetailRap(props) {
   return (
     <div className="container" id="hethongrap">
       <h6 className="title_hethong font-weight-bold">HỆ THỐNG RẠP</h6>
-      <div className="rap_container mb-5">
+      <div className="rap_container">
         <Tabs tabPosition="left">{renderDSRap()}</Tabs>
       </div>
     </div>

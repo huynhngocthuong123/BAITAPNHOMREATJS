@@ -16,6 +16,13 @@
       font-size: 15px;
       color: black;
     }
+    .card_title{
+      font-size: 20px;
+      height: 50px;
+    }
+    .card-text{
+      max-height: 80px;
+    }
     
   }
   .item0 {
@@ -68,4 +75,27 @@
      border-radius: 15px;
    }
   }
+}
+@media only screen and (min-width:740px) and  (max-width:1024px) {
+  .NEWS{
+    .newsfeed{
+    grid-template-rows: 300px 300px 300px;
+      .card-body{
+        // max-height: 150px;
+        height: 160px;
+        overflow: hidden;
+
+        .card-title{
+          font-size: 15px;
+        max-height: 50px;
+        }
+        .card-text{
+          font-size: 12px;
+          max-height: 90px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  
 }

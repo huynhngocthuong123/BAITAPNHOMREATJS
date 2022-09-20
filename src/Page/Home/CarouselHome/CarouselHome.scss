@@ -48,20 +48,20 @@
     }
     .trailer{
       .youtube_trailer {
-        height: 220px;
-        width: 415px;
+        max-height: 220px;
+        max-width: 415px;
         position: absolute;
         left: 50%;
         top: 20%;
-        transform: translate(-50%, -50%);
+
       }
     }
     .close_trailer {
       position: absolute;
       left: 78%;
       top: 9%;
-      transform: translate(-50%, -50%);
     }
   }
 }
+
 

@@ -20,7 +20,7 @@ export default function Header() {
                     </a>
                 </div>
                 <div className='header_center'>
-                    <a className="center_title" href="">Trang Chủ</a>
+                    <a className="center_title" href="/">Trang Chủ</a>
                     <a className="center_title" href="#hethongrap" >Hệ Thống Rạp</a>
                     <a className="center_title" href="#news" >Tin Tức</a>
                     <a className="center_title" href="#footer" >Liên Hệ</a>
