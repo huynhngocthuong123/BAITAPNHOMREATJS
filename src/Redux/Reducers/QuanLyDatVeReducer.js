@@ -3,7 +3,8 @@ import { CHI_TIET_PHONG_VE, DAT_VE } from "../action/Type/QLDatVe"
 const initialState = {
     chiTietPhongve: {},
     danhSachGheDangDat: [
-    ]
+    ],
+    danhSachGheKhachDat: [{ maGhe: 86121 }, { maGhe: 86122 }],
 }
 
 export const QuanLyDatVeReducer = (state = initialState, action) => {

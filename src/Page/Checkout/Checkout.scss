@@ -31,12 +31,13 @@ body {
       padding-bottom: 30px;
     }
     .book__left-loaighe {
+      margin-left: 20px;
       justify-content: center;
       p {
         color: #fff;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
-        margin-right: 30px;
+        margin-right: 25px;
         margin-top: 5px;
       }
 
@@ -50,9 +51,13 @@ body {
       .ghe-dadat {
         background-color: #4d4d4d;
       }
+      .ghe-khachdat {
+        background-color: #c72911 !important;
+        // cursor: no-drop;
+      }
       .boxghe {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         // background-color: red;
         border-radius: 6px;
         border: 1px solid #c7c6c7;
@@ -141,6 +146,11 @@ body {
           text-shadow: 0 0 10px rgb(164 219 214 / 54%);
         }
       }
+      .time {
+        color: #5cd4e4;
+        font-size: 28px;
+        font-weight: 700;
+      }
     }
     .btn-muave {
       background-image: linear-gradient(-225deg, #22e1ff, #1d8fe1 48%, #625eb1);
@@ -181,6 +191,11 @@ body {
   background-color: #c9880f;
 }
 
+.ghe-khach-dat {
+  background-color: #c72911 !important;
+  pointer-events: none;
+}
+
 .ghedd-tenghe {
   color: #5cd4e4;
   font-weight: 700;
@@ -188,3 +203,13 @@ body {
   display: inline;
   padding: 0 5px;
 }
+
+
+// responsive
+@media  only screen and (max-width:740px) {
+ 
+}
+
+@media  only screen and (min-width:740px) and (max-width: 1024px)  {
+
+ }

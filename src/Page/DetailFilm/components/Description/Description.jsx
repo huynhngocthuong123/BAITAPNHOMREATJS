@@ -6,7 +6,7 @@ const Description = ({ film }) => {
 
     return (
         <>
-            <div className="col-6 ">
+            <div className="col-md-6 detail__thongtin-left">
                 <div className='row-info'>
                     <div className="title-info">Ngày khởi chiếu</div>
                     <div className="content-info">{moment(film.ngayKhoiChieu).format('DD-MM-YYYY')}</div>
@@ -36,7 +36,7 @@ const Description = ({ film }) => {
                         Tiếng Việt</div>
                 </div>
             </div>
-            <div className="col-6 detail__thongtin-right">
+            <div className="col-md-6 detail__thongtin-right">
                 <div className="title-info">Nội dung</div>
                 <div className="content-info">{film.moTa}</div>
             </div>

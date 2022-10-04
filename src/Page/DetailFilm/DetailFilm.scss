@@ -2,6 +2,8 @@
 
 .movie__detail {
   background-color: #0a2029;
+  margin-top: -60px;
+  padding-bottom: 100px;
   .detail__film {
     margin: auto;
     max-width: 940px;
@@ -55,4 +57,16 @@
       }
     }
   }
+}
+
+
+// responsive
+@media only screen and (max-width:740px) {
+  .movie__detail {
+    padding-top: 70px;
+  }
+}
+
+@media only screen and (min-width:740px) and (max-width:1024px) {
+  
 }

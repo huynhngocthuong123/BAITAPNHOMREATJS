@@ -1,4 +1,4 @@
-#hethongrap{
+#hethongrap {
   padding-left: 130px;
 }
 .rap_container {
@@ -13,11 +13,11 @@
     transform: scale(1.01);
   }
   .ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
-.ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
-.ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
-.ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab .AAA:hover {
-  padding-left: 0 !important;
-}
+  .ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+  .ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+  .ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab .AAA:hover {
+    padding-left: 0 !important;
+  }
   .ant-tabs-tab-active {
     transition: all 0.6s;
     opacity: 1;
@@ -26,13 +26,13 @@
     height: 600px;
     overflow: hidden;
     overflow-y: scroll;
-    .ant-tabs-tab-btn{
-      img{
+    .ant-tabs-tab-btn {
+      img {
         width: 50px;
       }
     }
   }
-  .ant-tabs-content{   
+  .ant-tabs-content {
     .ant-tabs-content-left {
       max-width: 720px;
       height: 600px;
@@ -40,18 +40,18 @@
       overflow-y: scroll;
     }
   }
-  .img_right{
+  .img_right {
     width: 80px;
     height: 80px;
   }
-  .name_film{
+  .name_film {
     font-size: 17px;
   }
-  .icon_heart{
+  .icon_heart {
     color: red;
     font-size: 11px;
   }
-  .title_filmhot{
+  .title_filmhot {
     color: red;
     font-size: 11px;
   }
@@ -78,7 +78,6 @@
   display: none;
 }
 
- 
 /* LỊCH CHIEU */
 .lichchieu {
   display: grid;
@@ -91,7 +90,7 @@
 .lichchieu_time {
   opacity: 0.5;
   font-weight: 500;
-  padding: 2px 3px;
+  // padding: 2px 3px;
   border-radius: 10px;
   border: 2px solid white;
   transition: all 0.2s;
@@ -101,32 +100,31 @@
     opacity: 1;
   }
 }
-@media screen and (max-width:740px) {
-  #hethongrap{
+@media screen and (max-width: 740px) {
+  #hethongrap {
     padding: 10px;
-    .ant-tabs-tab{
+    .ant-tabs-tab {
       padding: 0;
     }
-    .rap_container{
+    .rap_container {
       padding: 10px;
       margin: 0;
-      .ant-tabs-tabpane{
+      .ant-tabs-tabpane {
         padding-left: 5px;
       }
-      .ant-tabs-nav{
-        .ant-tabs-nav-wrap{
+      .ant-tabs-nav {
+        .ant-tabs-nav-wrap {
           .ant-tabs-nav-list {
             height: 300px;
             max-width: 140px;
-            .ant-tabs-tab-btn{
-              .title_rap{
+            .ant-tabs-tab-btn {
+              .title_rap {
                 font-size: 8px;
               }
-              .title_chitiet{
+              .title_chitiet {
                 font-size: 8px;
-
               }
-              img{
+              img {
                 width: 20px;
                 height: 20px;
               }
@@ -138,16 +136,16 @@
         height: 300px;
         overflow: hidden;
         overflow-y: scroll;
-    }
-    .ant-tabs-content{   
-      .ant-tabs-content-left {
-        height: 300px;
       }
-    }
+      .ant-tabs-content {
+        .ant-tabs-content-left {
+          height: 300px;
+        }
+      }
       .lichchieu {
         width: 100px;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(10,20px);
+        grid-template-rows: repeat(10, 20px);
         max-height: 40px;
         overflow-y: scroll;
         .lichchieu_item {
@@ -156,34 +154,34 @@
           margin-left: 2px;
         }
       }
-      .img_right{
+      .img_right {
         width: 35px;
         height: 35px;
       }
-      .name_film{
+      .name_film {
         width: 100px;
         font-size: 10px;
       }
-      .rate{
-        .icon_heart{
+      .rate {
+        .icon_heart {
           color: red;
           font-size: 7px;
         }
-        .title_filmhot{
+        .title_filmhot {
           color: red;
           font-size: 7px;
         }
       }
-      .title_add{
+      .title_add {
         width: 100px;
         font-size: 7px;
       }
-    } 
-   
+    }
   }
 }
-@media only screen and (min-width:740px) and  (max-width:1024px) {
-  #hethongrap{
+
+@media only screen and (min-width: 740px) and (max-width: 1024px) {
+  #hethongrap {
     padding: 15px;
     .lichchieu {
       width: 170px;
@@ -195,14 +193,13 @@
         margin-left: 2px;
       }
     }
-    .rap_container{
+    .rap_container {
       margin: 0;
       .ant-tabs-nav-list {
         max-width: 300px;
         overflow: hidden;
         overflow-y: scroll;
       }
-    } 
-   
+    }
   }
 }

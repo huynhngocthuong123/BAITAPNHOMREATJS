@@ -103,11 +103,11 @@ export default function DetailRap(props) {
                                 .map((giochieu, index) => {
                                   return (
                                     <div className="lichchieu_item" key={index}>
-                                      <div className="">
+                                      <div className="row">
                                         <NavLink
-                                          className="lichchieu_time"
+                                          className="lichchieu_time col"
                                           style={{ color: "#5BBD2B" }}
-                                          to="./"
+                                          to={`/checkout/${giochieu.maLichChieu}`}
                                         >
                                           {moment(
                                             giochieu.ngayChieuGioChieu
