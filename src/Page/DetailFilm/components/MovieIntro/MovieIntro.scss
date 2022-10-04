@@ -18,6 +18,7 @@
       height: 600px;
       width: 100%;
       object-fit: cover;
+      // background-position: top;
       // filter: blur(10px);
     }
   }
@@ -41,7 +42,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    
     .row {
       .movie__poster {
         .poster__img {
@@ -76,7 +77,9 @@
         flex-direction: column;
         justify-content: center;
         color: white;
-
+        .movie__info-content {
+          margin-left: 30px;
+        }
         .showtime {
           font-size: 16px;
         }
@@ -118,5 +121,35 @@
         }
       }
     }
+  }
+}
+
+
+// responsive
+@media only screen and (max-width: 740px) {
+  .movie__intro {
+    .detail__info {
+      padding-top: 100px;
+      .movie__poster {
+        .poster__img {
+          margin: auto;
+        }
+      }
+      .movie__info {
+        .movie__info-content {
+          padding-left: 50px;
+        }
+      }
+
+    }
+  }
+  .movie__intro .detail__info .row .movie__rating {
+    align-items: center;
+  }
+}
+
+@media only screen and  (min-width: 740px) and (max-width: 1024px)  {
+  .movie__intro .detail__info .row .movie__rating {
+    align-items: center;
   }
 }

@@ -22,6 +22,12 @@ export default function FilmDangChieu() {
             perPage: 5,
             perMove: 1,
             autoplay: false,
+            breakpoints: {
+              1024: {
+                perPage: 3,
+                width: "100%",
+              }
+            },
           }}
           aria-label="React Splide Example"
         >

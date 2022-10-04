@@ -30,8 +30,8 @@ const MovieIntro = ({ film }) => {
       </div>
       <div className='blur__overlay'></div>
       <div className='detail__info  myContainer'>
-        <div className="row">
-          <div className="movie__poster col-3">
+        <div className="detail__info-content row">
+          <div className="movie__poster col-md-3 col-12">
             <div className="poster__img d-flex justify-content-center align-items-center" >
               <img className='w-100 h-100' src={film.hinhAnh} alt="" />
               <div className='play__btn'>
@@ -43,8 +43,8 @@ const MovieIntro = ({ film }) => {
               </div>
             </div>
           </div>
-          <div className="movie__info col-6">
-            <div>
+          <div className="movie__info col-md-6 col-6 ">
+            <div className='movie__info-content'>
               <div className='showtime'>Ngày chiếu: {moment(film.ngayKhoiChieu).format('DD-MM-YYYY')}
               </div>
               <div>
@@ -56,7 +56,7 @@ const MovieIntro = ({ film }) => {
               </a>
             </div>
           </div>
-          <div className="movie__rating  d-flex col-3">
+          <div className="movie__rating  d-flex col-md-3 col-6">
             <div className={`c100 p${film.danhGia * 10} big`}>
               <span>{film.danhGia}</span>
               <div className="slice">
